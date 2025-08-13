@@ -1,15 +1,18 @@
 const Recipes=require("../models/recipe");
 const { route } = require("../routes/recipe");
 
-const getRecipes =(req,res)=>{
-    res.json({message:"helllo"})
+const getRecipes =async(req,res)=>{
+    const recipes=await Recipes.find();
+    return res.json(recipes);
 }
 const getRecipe =(req,res)=>{
     res.json({message:"helllo"})
 }
 const addRecipe =async(req,res)=>{
     const {title,ingredients,instruction,time,coverImage}=req.body;
-
+ console.log(req.body);
+ 
+    // return res.json({message:"helllo"})
     if(!title || !ingredients || !instruction)
     {
         res.json({message:"required fields are missing"})

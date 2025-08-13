@@ -1,10 +1,11 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "��#\u0000 \u0000F\u0000O\u0000O\u0000D\u0000-\u0000R\u0000E\u0000S\u0000\r\u0000 \u0000",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +13,8 @@
   "type": "commonjs",
   "dependencies": {
     "dotenv": "^17.2.1",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mongoose": "^8.17.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
