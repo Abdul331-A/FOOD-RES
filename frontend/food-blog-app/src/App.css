@@ -191,7 +191,7 @@ section{
 .form-control{
   display: flex;
   justify-content: space-between;
-  gap:1rem;
+  gap:2rem;
   margin-top: 1rem;
 }
 

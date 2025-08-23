@@ -3,8 +3,8 @@ const router=express.Router();
 const {userLogin,userSignup,getUser}=require("../controller/user")
 
 
-router.post("/signup",userSignup)
-router.post("/signin",userLogin)
+router.post("/signUp",userSignup)
+router.post("/Login",userLogin)
 router.get("/user/:id",getUser)
 
 
