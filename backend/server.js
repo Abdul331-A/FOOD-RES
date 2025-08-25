@@ -12,6 +12,8 @@ app.use(cors());
 app.use("/",require("./routes/user"))
 app.use("/recipe",require("./routes/recipe"))
 
+// app.use(express.static("uploads"))
+
 app.listen(PORT,(err)=>{
     console.log(`Server is running on port ${PORT}`);
     

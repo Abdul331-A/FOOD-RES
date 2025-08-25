@@ -38,8 +38,8 @@ export default function Navbar() {
         <h2>food blog</h2>
         <ul>
           <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/myRecipe">My recipe</NavLink></li>
-          <li><NavLink to="/favRecpie">Favourite</NavLink></li>
+          <li onClick={()=>isLogin && setIsOpen(true)}><NavLink to={!isLogin?"/myRecipe":"/"}>My recipe</NavLink></li>
+          <li onClick={()=>isLogin && setIsOpen(true)}><NavLink to={!isLogin?"/favRecpie":"/"}>Favourite</NavLink></li>
           <li onClick={checkLogin}><p className="login"></p>{(isLogin)?"Login":"logout"}</li>
         </ul>
       </header>

@@ -3,8 +3,12 @@ import fd from "../assets/foodRecipe.png";
 import RecipeItems from "../components/RecipeItems";
 import "../index.css";
 import "../App.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const navigatie=useNavigate()
+
+
   return (
     <>
       <section className="home">
@@ -15,7 +19,7 @@ export default function Home() {
             veritatis suscipit. Minima aperiam vel distinctio vero, sapiente id!
             Suscipit error dignissimos ab sequi.
           </h5>
-          <button className="">share your recipe</button>
+          <button onClick={()=>navigatie("/addRecipe")}>share your recipe</button>
         </div>
         <div className="rigth ">
           <img src={fd} alt="" width="420px" height="300px" />
