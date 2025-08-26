@@ -13,7 +13,7 @@ export default function RecipeItems() {
         {allRecipes?.map((item, index) => {
           return (
             <div key={index} className="card shadow-[0_1px_2px_rgba(0,0,0,0.5)] text-center rounded-[5px]">
-              <img src={foodImg} width="120px" height="100px" />
+              <img src={`${item.coverImage}`} width="120px" height="100px"/>
               <div className="card-body bg-[#99d4bc] p-4">
                 <div className="title mb-[5px] text-[15px] font-medium">{item.title}</div>
                 <div className="icons flex justify-between items-center">

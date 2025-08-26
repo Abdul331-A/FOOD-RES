@@ -1,8 +1,9 @@
-const User = require("../models/user");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
 
-const userSignup = async (req, res) => {
+import User from './../models/user.js';
+import bcrypt from 'bcrypt'
+import jwt from 'jsonwebtoken'
+
+export const userSignup = async (req, res) => {
   const { email, password } = req.body;
   // console.log(req.body);
 
@@ -23,7 +24,7 @@ const userSignup = async (req, res) => {
   });
   return res.status(200).json({ token, user:newUser });
 };
-const userLogin = async (req,res) => {
+export const userLogin = async (req,res) => {
    const { email, password } = req.body;
   if (!email || !password) {
     return res.status(400).json({ message: "Email and password is required" });
@@ -39,7 +40,7 @@ const userLogin = async (req,res) => {
     return res.status(400).json({error:"invalid credientials"})
   }
 };
-const getUser = async (req, res) => {
+export const getUser = async (req, res) => {
     try {
         const {id} = req.params;
 
@@ -62,4 +63,4 @@ const getUser = async (req, res) => {
     }
 };
 
-module.exports = { userLogin, userSignup, getUser };
+

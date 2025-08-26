@@ -1,5 +1,6 @@
-const express= require('express');
-const { getRecipes,getRecipe,addRecipe,deleteRecipe,editRecipe,upload } = require('../controller/recipe');
+import express from 'express';
+import { addRecipe, deleteRecipe, editRecipe, getRecipe, getRecipes, upload } from './../controller/recipe.js';
+
 const router=express.Router();
 
 
@@ -13,4 +14,4 @@ router.delete("/:id",deleteRecipe);
 
 
 
-module.exports=router;
+export default router;
